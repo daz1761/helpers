@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+<div style="font-family: Arial">
+
+    <h1>HTML Helpers Demo</h1>
+
+    <!--  An HTML helper is a method that is used to render HTML content in the view.  HTML helpers are implemented as extension methods  -->
+
+    <h3>An HTML helper is a method that is used to render HTML content in the view.  HTML helpers are implemented as extension methods</h3>
+
+    <h4>This has been created with an input tag</h4>
+    <input type="text" id="firstname" name="firstname" value="" />
+
+    <h5>This has been created with a helper method with an atribute anonymous object</h5>
+    @Html.TextBox("firstname", "John", new { style = "background-color: Grey; color: White; font-weight:bold", title = "Please enter your first name" })
+
+    <h5>This has been created with a helper method with an atribute anonymous object with a class added</h5>
+    <!-- class is reserved keyword so we need the AT symbol  -->
+    @Html.TextBox("firstname", "John", new { @class = "greytextbox" })
+
+    <h5>Generate a textbox to enter password, so that the input is masked</h5>
+    @Html.Password("Password")
+
+    <h5>Generate a multi-line textbox with 5 rows and 20 columns</h5>
+    @Html.TextArea("Comments", "", 5, 20, null) <!--NULL is for no HTML attributes -->
+
+    <h5>Generate a hidden textbox</h5>
+    @Html.Hidden("id")
+
+    <h5>Please note, hidden textbox is used to store id values.  Id values are not displayed on the page to the end user, but we need them to update data when the form is posted to the server.</h5>
+
+</div>
