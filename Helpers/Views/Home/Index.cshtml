@@ -33,4 +33,18 @@
 
     <h5>Please note, hidden textbox is used to store id values.  Id values are not displayed on the page to the end user, but we need them to update data when the form is posted to the server.</h5>
 
+    <h5>Lets create a dropdown list</h5>
+    <h5>A dropdownlist is a collection of <span class="mono">SelectListItem</span> objects</h5>
+
+    @Html.DropDownList("Departments", new List<SelectListItem>
+    {
+        new SelectListItem { Text="IT", Value="1" },
+        new SelectListItem { Text="HR", Value="2" },
+        new SelectListItem { Text="Payroll", Value="3" }
+    }, "Select Department")
+
+    <h5>Lets create a dropdown list but this time lets populate it from our Employee3 DB - tblDepartments</h5>
+
+    @Html.DropDownList("Departments", "Please Select")
+
 </div>
