@@ -44,7 +44,20 @@
     }, "Select Department")
 
     <h5>Lets create a dropdown list but this time lets populate it from our Employee3 DB - tblDepartments</h5>
+    <h5>IT is selected as we found out which item was selected by adding a column - IsSelected</h5>
 
     @Html.DropDownList("Departments", "Please Select")
+
+    <h5>When we make database changes, we need to right-click and refresh the ADO.NET Entity Data Model</h5>
+
+    <h1>HTML.TextBox v/s HTML.TextBoxFor</h1>
+
+    <h5>When using the <span class="mono">For</span> these are strongly typed and thus can be checked during compile time</h5>
+    <h5>When using ViewBag we can access is like <span class="mono">ViewBag["Departments"] or ViewBag.Departments</span> but we must cast to strongly typed <span class="mono">ViewBag["Departments"] as List"<"Departments">"</span></h5>
+
+    @Html.TextBox("CompanyName", (string)ViewBag.CompanyName)
+    <br />
+    <br />
+    @Html.DropDownList("Departments", "Select Department")
 
 </div>

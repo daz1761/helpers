@@ -1,0 +1,20 @@
+﻿@model Helpers.Models.Company
+
+@{
+    Layout = null;
+}
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+<h2>Index1 - Strongly Typed</h2>
+
+<h5>When using the <span class="mono">For</span> these require a strongly typed View (e.g. <span class="mono">model Helpers.Company</span>)</h5>
+<h5>The other methods do not require a strongly typed view</h5>
+
+@Html.TextBoxFor(m => m.CompanyName)
+<br />
+<br />
+@Html.DropDownListFor(m => m.Departments, new SelectList(Model.Departments, "Id", "Name"), "Select Department")
+<br />
+<br />
+<img src="~/Images/SelectList.png" alt="Piss Off" />
